@@ -15,11 +15,14 @@ From DockerHub (https://hub.docker.com/r/floydhub/dl-docker/) Docker image is pu
 
 ```
 docker pull floydhub/dl-docker:cpu
+cd keras_datascience_container
 ```
+![Image of Yaktocat](capture1.png)
 
 ```
 docker build -t floydhub/dl-docker:cpu -f Dockerfile.cpu .
 ```
+![Image of Yaktocat](capture2.png)
 
 ### Step-2 : Run the Docker image as a Container
 Once the docker image is built, we are supposed to run a container that uses this image.
@@ -27,9 +30,11 @@ Once the docker image is built, we are supposed to run a container that uses thi
 ```
 docker run -it -p 8888:8888 -p 6006:6006 floydhub/dl-docker:cpu jupyter notebook
 ```
-
+![Image of Yaktocat](capture3.png)
+![Image of Yaktocat](capture4.png)
 After the above script, we should be able to access Jupyter Notebook (inside the container) from our localhost. The Jupyter notebook has Python (for Keras and Tensorflow) kernel.
 
 
 ### Step-3 : Implement the existing Jupyter code 
-After open the Jupyter notebook, we could upload our existing code and related datasets. We run it in the container and get the output data.
+Once open the Jupyter notebook, we could upload our existing code and related datasets. We run it in the container and get the output data.
+![Image of Yaktocat](capture5.png)
