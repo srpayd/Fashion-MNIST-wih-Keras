@@ -39,7 +39,7 @@ Then go to the folder which we want to store the Dockerfile and build docker ima
 ```
 docker build -t floydhub/dl-docker:cpu -f Dockerfile.cpu .
 ```
-![Image of Yaktocat](capture2.png)
+![Image of Yaktocat](Capture2.png)
 
 ### Step-2 : Run the Docker image as a Container
 Once the docker image is built, we are supposed to run a container that uses this image.
