@@ -22,7 +22,7 @@ Technically, deep learning CNN models to train and test, each input image will p
 
 * <a href="https://ibb.co/kV1j9p"><img src="https://preview.ibb.co/nRkBpp/gec2.jpg" alt="gec2" border="0"></a>
 
-## 2. Dockerize a Keras Application on Jupyter Notebook
+## 2. Dockerize Jupyter with Keras
 
 ### Step-1 : Obtain the docker image
 From DockerHub (https://hub.docker.com/r/floydhub/dl-docker/) Docker image is pulled. The image also could automatically built based on the Dockerfile in the Github repo.
