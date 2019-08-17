@@ -62,3 +62,7 @@ Once open the Jupyter notebook, we will come across the page as below screenshot
 Then we could upload our existing code and related datasets. We run it in the container and get the output data as we run Jupyter notebook in our localhost.
 
 ![Image of Yaktocat](capture4.png)
+
+
+A screenshot for our Jupyter Keras code running on the docker container.
+![Image of Yaktocat](capture5.png)
