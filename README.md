@@ -29,11 +29,13 @@ From DockerHub (https://hub.docker.com/r/floydhub/dl-docker/) Docker image is pu
 
 ```
 docker pull floydhub/dl-docker:cpu
-cd keras_datascience_container
 ```
-![Image of Yaktocat](capture1.png)
+![Image of Yaktocat](capture6.PNG)
 
+
+Then go to the folder which we want to store the Dockerfile and build docker image.
 ```
+cd keras_datascience_container
 docker build -t floydhub/dl-docker:cpu -f Dockerfile.cpu .
 ```
 ![Image of Yaktocat](capture2.png)
