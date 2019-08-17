@@ -28,28 +28,28 @@ Technically, deep learning CNN models to train and test, each input image will p
 From DockerHub (https://hub.docker.com/r/floydhub/dl-docker/) Docker image is pulled. The image also could automatically built based on the Dockerfile in the Github repo.
 
 ```
-git clone https://github.com/saiprashanths/dl-docker.git
-cd dl-docker
+docker pull gaarv/jupyter-keras
 ```
 ![Image of Yaktocat](capture1.png)
 
 
-Then go to the folder which we want to store the Dockerfile and build docker image.
+Extended from Jupyter Notebook Scientific Python Stack which contains :
 
-```
-docker build -t floydhub/dl-docker:cpu -f Dockerfile.cpu .
-```
-![Image of Yaktocat](Capture2.png)
+  - Jupyter Notebook 5.2.x
+  - Conda Python 3.x environment
+  - pandas, matplotlib, scipy, seaborn, scikit-learn, scikit-image, sympy, cython, patsy, statsmodel, cloudpickle, dill, numba, bokeh,       vincent, beautifulsoup, xlrd pre-installed
+
+After image is build,it triggered with each update of Jupyter Notebook Scientific Python Stack in the Dockerfile and install Keras.
 
 ### Step-2 : Run the Docker image as a Container
-Once the docker image is built, we are supposed to run a container that uses this image.
+Once the docker image is built, we need to run a container that uses this image.
 
 ```
-docker run -it -p 8888:8888 -p 6006:6006 floydhub/dl-docker:cpu jupyter notebook
+docker run -d -v /$(pwd)/:/home/jovyan/work -p 8888:8888 gaarv/jupyter-keras start-notebook.sh --NotebookApp.token=''
 ```
 ![Image of Yaktocat](capture3.png)
 
-After the above script, we should be able to access Jupyter Notebook (inside the container) from our localhost. The Jupyter notebook has Python (for Keras and Tensorflow) kernel.
+This command pulls the **gaarv/jupyter-keras** image from Docker Hub. It then starts a container running a Jupyter Notebook server and exposes the server on host port 8888. The command mounts the current working directory on the host as /home/jovyan/work in the container. The server logs appear in the terminal. With all these, the Jupyter notebook will have everything Everything is pre-installed for Python 3.x.Python (for Keras and Tensorflow) kernel.
 
 
 ### Step-3 : Implement the existing Jupyter code 
