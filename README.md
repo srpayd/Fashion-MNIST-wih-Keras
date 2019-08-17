@@ -64,7 +64,8 @@ Then we could upload our existing code and related datasets. We run it in the co
 ![Image of Yaktocat](capture4.png)
 
 
-Screenshots for our Jupyter Keras code running on the docker container.
-![Image of Yaktocat](capture5.png)
+A screenshot for reading the dataset from our Jupyter Keras code running on the docker container.
+- ![Image of Yaktocat](capture5.png) <br/><br/>
 
-![Image of Yaktocat](capture6.png)
+Another screenshot for running the model fit script from our Jupyter Keras code running on the docker container.
+- ![Image of Yaktocat](capture6.png)
