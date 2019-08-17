@@ -47,11 +47,14 @@ Once the docker image is built, we need to run a container that uses this image.
 ```
 docker run -d -v /$(pwd)/:/home/jovyan/work -p 8888:8888 gaarv/jupyter-keras start-notebook.sh --NotebookApp.token=''
 ```
-![Image of Yaktocat](capture3.png)
+![Image of Yaktocat](capture2.png)
 
-This command pulls the **gaarv/jupyter-keras** image from Docker Hub. It then starts a container running a Jupyter Notebook server and exposes the server on host port 8888. The command mounts the current working directory on the host as /home/jovyan/work in the container. The server logs appear in the terminal. With all these, the Jupyter notebook will have everything Everything is pre-installed for Python 3.x.Python (for Keras and Tensorflow) kernel.
+This command pulls the **gaarv/jupyter-keras** image from Docker Hub. It then starts a container running a Jupyter Notebook server and exposes the server on host port 8888. The command mounts the current working directory on the host as /home/jovyan/work in the container. The server logs appear in the terminal. With all these, the Jupyter notebook will have Python 3.x (for Keras and Tensorflow) kernel.
 
 
 ### Step-3 : Implement the existing Jupyter code 
-Once open the Jupyter notebook, we could upload our existing code and related datasets. We run it in the container and get the output data.
-![Image of Yaktocat](capture4.png)
+Once open the Jupyter notebook, we will come across the page as below screenshot.
+
+![Image of Yaktocat](capture3.png)
+
+Then we could upload our existing code/codes and related datasets. We run it in the container and get the output data as we run Jupyter notebook in our localhost.
