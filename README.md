@@ -28,14 +28,15 @@ Technically, deep learning CNN models to train and test, each input image will p
 From DockerHub (https://hub.docker.com/r/floydhub/dl-docker/) Docker image is pulled. The image also could automatically built based on the Dockerfile in the Github repo.
 
 ```
-docker pull floydhub/dl-docker:cpu
+git clone https://github.com/saiprashanths/dl-docker.git
+cd dl-docker
 ```
-![Image of Yaktocat](capture6.PNG)
+![Image of Yaktocat](capture1.png)
 
 
 Then go to the folder which we want to store the Dockerfile and build docker image.
+
 ```
-cd keras_datascience_container
 docker build -t floydhub/dl-docker:cpu -f Dockerfile.cpu .
 ```
 ![Image of Yaktocat](capture2.png)
