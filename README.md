@@ -25,13 +25,23 @@ Technically, deep learning CNN models to train and test, each input image will p
 ## 2. Dockerize Jupyter with Keras
 
 ### Alterative 1: via Dockerfile
+
+
+#### Step-1 : Create a file named Dockerfile
 Create a new Dockerfile like the one attached. Then build a new image.
+
+#### Step-2 : Add instructions in Dockerfile
+
+#### Step-3 : Build dockerfile to create image
 
 ```
 docker build -t jupyter/scipy-notebook:17aba6048f44 -f Dockerfile .
 ```
 
 The docker run command pulls the **jupyter/scipy-notebook** image currently tagged **17aba6048f44** from Docker Hub. It then starts a container running a Jupyter Notebook server and exposes the server on 8888 port.
+
+#### Step-4 : Run image to create container
+
 ``` 
 docker run it -p 8888:8888 jupyter/scipy-notebook:17aba6048f44 jupyter notebook 
 ```
